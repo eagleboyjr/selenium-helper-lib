@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestNG">
+    <test name="Test Image Upload">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="testscripts.TestPage" />
+        </classes>
+    </test>
+</suite>
