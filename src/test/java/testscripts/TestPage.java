@@ -1,7 +1,9 @@
 package testscripts;
 
+import com.sun.org.glassfish.gmbal.Description;
 import driversetup.DriverSetup;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.*;
 import pagefactory.Page1;
 import pagefactory.pagefactoryinit.PageFactoryInit;
@@ -15,17 +17,26 @@ public class TestPage implements DriverSetup{
     @Parameters({"browser"})
     @BeforeClass
     public void setup(String browser) {
-        driver = initializeLocalDriver(browser);
-        PageFactoryInit driverInit = new PageFactoryInit(driver);
-        driver.get(BASE_URL);
+//        driver = initializeLocalDriver(browser);
+//        PageFactoryInit driverInit = new PageFactoryInit(driver);
+//        driver.get(BASE_URL);
     }
 
-    @Test
+    @Test(description = "Testing first Assert")
     public void test(){
-        Page1 pg1 = new Page1(driver);
-        pg1.click();
-        pg1.enterFile("C:\\Users\\Todd\\Pictures\\ISu0sesfwf419v0000000000.jpg");
+        Assert.assertTrue(true);
     }
+
+    @Test(description = "Testing second Assert")
+    public void test1(){
+        Assert.assertTrue(true);
+    }
+
+    @Test(description = "Testing third Assert")
+    public void test2(){
+        Assert.assertTrue(false);
+    }
+
 
     @AfterClass
     public void tearDown(){

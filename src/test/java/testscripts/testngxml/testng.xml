@@ -1,7 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="TestNG">
+    <listeners>
+        <listener class-name="logging.extentreports.ExtentITestListener" />
+    </listeners>
     <test name="Test Image Upload">
-        <parameter name="browser" value="chrome"/>
+        <parameter name="browser" value="firefox"/>
         <classes>
             <class name="testscripts.TestPage" />
         </classes>
