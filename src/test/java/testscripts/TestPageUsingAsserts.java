@@ -10,7 +10,7 @@ import pagefactory.pagefactoryinit.PageFactoryInit;
 import static testscripts.testscriptsconsts.TestScriptConsts.BASE_URL;
 
 
-public class TestPage implements DriverSetup{
+public class TestPageUsingAsserts implements DriverSetup{
 
     private WebDriver driver;
 
@@ -32,7 +32,7 @@ public class TestPage implements DriverSetup{
         Assert.assertTrue(true);
     }
 
-    @Test(description = "Testing third Assert")
+    @Test(description = "Testing third Assert", enabled = false)
     public void test2(){
         Assert.assertTrue(false);
     }

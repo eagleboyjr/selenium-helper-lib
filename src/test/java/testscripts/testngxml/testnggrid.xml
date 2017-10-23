@@ -4,70 +4,70 @@
         <parameter name="browser" value="firefox" />
         <parameter name="nodeURL" value="http://192.168.56.104:5555/wd/hub" />
         <classes>
-            <class name="testscripts.TestPage" />
+            <class name="testscripts.TestPageUsingAsserts" />
         </classes>
     </test>
     <test name="Expedia Page in Internet Explorer on Windows 7">
         <parameter name="browser" value="explorer" />
         <parameter name="nodeURL" value="http://192.168.56.104:5555/wd/hub" />
         <classes>
-            <class name="testscripts.TestPage" />
+            <class name="testscripts.TestPageUsingAsserts" />
         </classes>
     </test>
     <test name="Expaedia Page Chrome testing on Windows 7">
         <parameter name="browser" value="chrome" />
         <parameter name="nodeURL" value="http://192.168.56.104:5555/wd/hub" />
         <classes>
-            <class name="testscripts.TestPage" />
+            <class name="testscripts.TestPageUsingAsserts" />
         </classes>
     </test>
     <test name="Expedia Page Firefox Testing in Windows 8">
         <parameter name="browser" value="firefox" />
         <parameter name="nodeURL" value="http://192.168.56.105:5555/wd/hub" />
         <classes>
-            <class name="testscripts.TestPage" />
+            <class name="testscripts.TestPageUsingAsserts" />
         </classes>
     </test>
     <test name="Expedia Page Chrome Testing in Windows 8">
         <parameter name="browser" value="chrome" />
         <parameter name="nodeURL" value="http://192.168.56.105:5555/wd/hub" />
         <classes>
-            <class name="testscripts.TestPage" />
+            <class name="testscripts.TestPageUsingAsserts" />
         </classes>
     </test>
     <test name="Expedia Page Internet Explorer Testing in Windows 8">
         <parameter name="browser" value="explorer" />
         <parameter name="nodeURL" value="http://192.168.56.105:5555/wd/hub" />
         <classes>
-             <class name="testscripts.TestPage" />
+             <class name="testscripts.TestPageUsingAsserts" />
         </classes>
     </test>
     <test name="Expedia Page Chrome Testing on Windows 10">
         <parameter name="browser" value="chrome" />
         <parameter name="nodeURL" value="http://192.168.56.102:5555/wd/hub" />
         <classes>
-            <class name="testscripts.TestPage" />
+            <class name="testscripts.TestPageUsingAsserts" />
         </classes>
     </test>
     <test name="Expedia Page Firefox Testing on Windows 10">
         <parameter name="browser" value="firefox" />
         <parameter name="nodeURL" value="http://192.168.56.102:5555/wd/hub" />
         <classes>
-            <class name="testscripts.TestPage" />
+            <class name="testscripts.TestPageUsingAsserts" />
         </classes>
     </test>
     <test name="Expedia Page Internet Explorer Testing on Windows 10">
         <parameter name="browser" value="explorer" />
         <parameter name="nodeURL" value="http://192.168.56.102:5555/wd/hub" />
     <classes>
-        <class name="testscripts.TestPage" />
+        <class name="testscripts.TestPageUsingAsserts" />
     </classes>
     </test>
     <test name="Expedia Page Edge Testing on Windows 10">
         <parameter name="browser" value="edge" />
         <parameter name="nodeURL" value="http://192.168.56.102:5555/wd/hub" />
         <classes>
-            <class name="testscripts.TestPage" />
+            <class name="testscripts.TestPageUsingAsserts" />
         </classes>
     </test>
 </suite>

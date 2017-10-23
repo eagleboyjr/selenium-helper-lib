@@ -33,7 +33,7 @@ public class ExtentITestListener implements ITestListener {
 
     @Override
     public synchronized void onTestSkipped(ITestResult iTestResult) {
-        test.get().skip(iTestResult.getThrowable());
+        test.get().skip("Test Skipped");
     }
 
     @Override

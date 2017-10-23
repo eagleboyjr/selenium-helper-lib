@@ -6,7 +6,7 @@
     <test name="Test Image Upload">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="testscripts.TestPage" />
+            <class name="testscripts.TestPageUsingAsserts" />
         </classes>
     </test>
 </suite>

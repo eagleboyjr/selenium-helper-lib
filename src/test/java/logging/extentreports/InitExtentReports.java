@@ -1,18 +1,17 @@
 package logging.extentreports;
 
-import com.aventstack.extentreports.ExtentReporter;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.converters.ExtentHtmlLogConverter;
 
 import static logging.extentreports.Constants.DOC_TITLE;
+import static logging.extentreports.Constants.OUTPUT_HTML;
 
 public class InitExtentReports {
     private static ExtentReports extent;
 
     public static ExtentReports getInstance(){
         if(extent ==null)
-            createInstance("log-output/extentReport.html");
+            createInstance(OUTPUT_HTML);
 
         return extent;
     }
@@ -25,10 +24,10 @@ public class InitExtentReports {
         htmlReporter.config().setDocumentTitle(DOC_TITLE);
 
         extent = new ExtentReports();
-        //extent.setSystemInfo(("OS : ", sysprop.get("os.name"));
+        extent.setSystemInfo("OS : ", System.getProperty("os.name"));
         extent.attachReporter(htmlReporter);
-
         return extent;
     }
+
 
 }
