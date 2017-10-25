@@ -5,7 +5,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
+/**
+ * Connects to MySQL database using the jdbc URI (i.e. jdbc:mysql://localhost:3306/flights_testdata),
+ * retrieves data using a standard query then reads the data into a 2d array format so it can be
+ * interpreted by @DataProvider
+ */
 
 public interface MysqlDao{
 

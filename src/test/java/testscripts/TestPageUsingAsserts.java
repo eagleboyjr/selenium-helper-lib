@@ -1,6 +1,7 @@
 package testscripts;
 
 import com.sun.org.glassfish.gmbal.Description;
+import daolibrary.MongoDbDao;
 import driversetup.DriverSetup;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -23,9 +24,8 @@ public class TestPageUsingAsserts implements DriverSetup{
     }
 
     @Test(description = "Testing first Assert")
-    public void test(){
-        Assert.assertTrue(true);
-    }
+
+    public void test(){ Assert.assertTrue(true);}
 
     @Test(description = "Testing second Assert")
     public void test1(){
