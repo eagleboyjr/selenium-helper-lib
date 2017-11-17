@@ -14,7 +14,7 @@ import static utils.UtilConstants.PROJECT_NAME;
 
 public class Image {
 
-    String fileName = PROJECT_NAME +  Randomize.randomNum();
+    private String fileName = PROJECT_NAME +  Randomize.randomNum();
 
     public void takeScreenshot(WebDriver driver, String path) throws IOException {
 
