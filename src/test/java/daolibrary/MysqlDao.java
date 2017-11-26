@@ -25,6 +25,10 @@ public interface MysqlDao{
     default ResultSet getMysqlData(Connection connect, String queryString) throws SQLException {
 
         Statement statement = connect.createStatement();
+
+        //adding.... Don't know if it will work yet.
+        connect.close();
+
         return statement.executeQuery(queryString);
     }
 
@@ -59,6 +63,7 @@ public interface MysqlDao{
         for(List<String> list: dataList) {
             dataArray[i++] = list.toArray(new String[list.size()]);
         }
+
 
         return dataArray;
     }

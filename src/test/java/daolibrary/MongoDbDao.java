@@ -53,7 +53,7 @@ public class MongoDbDao {
         while(cursor.hasNext()) {
 
             for (Map.Entry<String, Object> key: cursor.next().entrySet()) {
-                if (!key.getKey().toString().equals("_id")) {
+                if (!key.getKey().equals("_id")) {
                     String value = key.getValue().toString();
                     data.add(value);
                 }
