@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 public abstract class ActionClass {
 
     WebElement element = null;
-    
+
     abstract void select(WebElement element);
 
     abstract void deselect(WebElement element);
