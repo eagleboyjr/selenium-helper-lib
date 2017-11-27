@@ -8,7 +8,7 @@ import static actionslibrary.ActionsConsts.SCROLL_TO_COORDS;
 import static actionslibrary.ActionsConsts.SCROLL_TO_VIEW;
 
 
-public class Actions implements ActionClass {
+public class Actions implements BaseActions {
 
     WebElement element = null;
     private WebDriver driver;

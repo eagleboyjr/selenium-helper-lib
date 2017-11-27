@@ -2,7 +2,7 @@ package actionslibrary;
 
 import org.openqa.selenium.WebElement;
 
-public abstract class ActionClass {
+public abstract class BaseActions {
 
     WebElement element = null;
 
