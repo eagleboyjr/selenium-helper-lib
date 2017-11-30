@@ -28,6 +28,8 @@ public interface FormActions{
         getDropdownObj(element).selectByVisibleText(s);
     }
 
+    default List<WebElement> grabAllDropDownValues(WebElement element){return getDropdownObj(element).getOptions(); }
+
     default Select getDropdownObj(WebElement element){
         return new Select(element);
     }
