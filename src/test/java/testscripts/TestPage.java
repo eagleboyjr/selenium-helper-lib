@@ -22,20 +22,31 @@ public class TestPage implements DriverSetup{
 //        driver.get(BASE_URL);
     }
 
-    @Test(description = "Testing first Assert")
+    @Test(description = "Testing first Assert", groups = {"regression"})
     public void test(){
         Assert.assertTrue(true);
     }
 
-    @Test(description = "Testing second Assert")
+    @Test(description = "Testing second Assert", groups = {"regression"})
     public void test1(){
         Assert.assertTrue(true);
     }
 
-    @Test(description = "Testing third Assert")
+    @Test(description = "Testing third Assert", groups = {"smoke"})
     public void test2(){
         Assert.assertTrue(false);
     }
+
+    @Test(description = "Testing fourth Assert", groups = {"smoke","regression"})
+    public void test3(){
+        Assert.assertTrue(true);
+    }
+
+    @Test(description = "Testing fifth Assert", groups = {"sanity"})
+    public void test4(){
+        Assert.assertTrue(false);
+    }
+
 
 
     @AfterClass

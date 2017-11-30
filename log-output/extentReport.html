@@ -33,7 +33,8 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -47,7 +48,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Oct 20, 2017 11:46:58 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Nov 27, 2017 01:04:47 PM</span>
 				</a>
 			</li>
 			<li>
@@ -81,6 +82,18 @@
 			<!-- test toggle -->
 
 			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>regression</a></li>
+					<li><a href='#'>smoke</a></li>
+					<li><a href='#'>sanity</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
 			<!-- category toggle -->
 
 			<!-- clear filters -->
@@ -124,10 +137,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>2</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='80%'><span class='strong'>4</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='20%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -139,10 +152,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>2</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='80%'><span class='strong'>4</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='20%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -160,14 +173,14 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Asserts Testing</span>
-						<span class='test-time'>Oct 20, 2017 11:46:58 PM</span>
+						<span class='test-time'>Nov 27, 2017 01:04:47 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Oct 20, 2017 11:46:58 PM</span>
-	<span class='label end-time'>Oct 20, 2017 11:46:58 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+31ms</span>
+	<span class='label start-time'>Nov 27, 2017 01:04:47 PM</span>
+	<span class='label end-time'>Nov 27, 2017 01:04:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+33ms</span>
 </div>
 	<div class='test-desc'>Testing the extent listener class through asserts </div>
 	<ul class='collapsible node-list' data-collapsible='accordion'>
@@ -176,7 +189,8 @@
 					<div class='collapsible-header'>
 						<h5 class='node-name'>Testing first Assert</h5>
 						<span class='test-status right pass'>pass</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+6ms</span>
+								<span class='category label white-text'>regression</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -191,8 +205,8 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>11:46:58 PM</td>
-													<td class='step-details'>Test passed</td>
+													<td class='timestamp'>1:04:47 PM</td>
+													<td class='step-details'><span class='label white-text green'>Status: Passed</span></td>
 												</tr>
 										</tbody>
 									</table>
@@ -204,6 +218,7 @@
 						<h5 class='node-name'>Testing second Assert</h5>
 						<span class='test-status right pass'>pass</span>
 						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+								<span class='category label white-text'>regression</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -218,8 +233,8 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>11:46:58 PM</td>
-													<td class='step-details'>Test passed</td>
+													<td class='timestamp'>1:04:47 PM</td>
+													<td class='step-details'><span class='label white-text green'>Status: Passed</span></td>
 												</tr>
 										</tbody>
 									</table>
@@ -230,7 +245,8 @@
 					<div class='collapsible-header'>
 						<h5 class='node-name'>Testing third Assert</h5>
 						<span class='test-status right fail'>fail</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+15ms</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+4ms</span>
+								<span class='category label white-text'>smoke</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -245,7 +261,7 @@
 										<tbody>
 												<tr class='log' status='fail'>
 													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-													<td class='timestamp'>11:46:58 PM</td>
+													<td class='timestamp'>1:04:47 PM</td>
 													<td class='step-details'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:93)
 	at org.testng.Assert.failNotEquals(Assert.java:512)
@@ -283,6 +299,63 @@
 								</div>
 						</div>
 				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='5'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>Testing fourth Assert</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+								<span class='category label white-text'>regression</span>
+								<span class='category label white-text'>smoke</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:04:47 PM</td>
+													<td class='step-details'><span class='label white-text green'>Status: Passed</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='6'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>Testing fifth Assert</h5>
+						<span class='test-status right pass'>pass</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+								<span class='category label white-text'>sanity</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>1:04:47 PM</td>
+													<td class='step-details'><span class='label white-text green'>Status: Passed</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
 	</ul>
 					</div>
 				</li>
@@ -311,6 +384,160 @@
 
 </div>
 <!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>regression</span>
+						<span class='category-status right'>
+							<span class='label pass'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 3</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 27, 2017 01:04:47 PM</td>
+										<td class='linked' test-id='2'>Asserts Testing.Testing first Assert</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 27, 2017 01:04:47 PM</td>
+										<td class='linked' test-id='3'>Asserts Testing.Testing second Assert</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 27, 2017 01:04:47 PM</td>
+										<td class='linked' test-id='5'>Asserts Testing.Testing fourth Assert</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>smoke</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+							<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 27, 2017 01:04:47 PM</td>
+										<td class='linked' test-id='4'>Asserts Testing.Testing third Assert</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Nov 27, 2017 01:04:47 PM</td>
+										<td class='linked' test-id='5'>Asserts Testing.Testing fourth Assert</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>sanity</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 27, 2017 01:04:47 PM</td>
+										<td class='linked' test-id='6'>Asserts Testing.Testing fifth Assert</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
 <!-- category view -->
 <div id='exception-view' class='view hide'>
 
@@ -354,7 +581,7 @@
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Oct 20, 2017 11:46:58 PM</td>
+                                                        <td>Nov 27, 2017 01:04:47 PM</td>
                                                         <td class='linked' test-id='4'>Asserts Testing.Testing third Assert</td>
                                                         <td><pre><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:93)
@@ -412,31 +639,87 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>5</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>5</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Oct 20, 2017 11:46:58 PM</div>
+					<div class='panel-lead'>Nov 27, 2017 01:04:47 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Oct 20, 2017 11:46:58 PM</div>
+			 		<div class='panel-lead'>Nov 27, 2017 01:04:47 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>140ms</div>
+					<div class='panel-lead'>129ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>OS:  </td>
+								<td>Windows 10</td>
+							</tr>
+							<tr>
+								<td>Test Engineer: </td>
+								<td>Todd</td>
+							</tr>
+							<tr>
+								<td>Java Version: </td>
+								<td>1.8.0_152-release</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+						</tr>
+						<tr>
+							<td>regression</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>smoke</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>sanity</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+					</table>
 				</div>
 			</div>
 		</div>
@@ -449,7 +732,7 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 2,
+				passParent: 4,
 				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
@@ -457,7 +740,7 @@
 				skipParent: 0,
 				exceptionsParent: 1,
 				
-				passChild: 2,
+				passChild: 4,
 				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
