@@ -28,6 +28,21 @@ public interface FormActions{
         getDropdownObj(element).selectByVisibleText(s);
     }
 
+    default List<WebElement> getAllSelectedDropDownValues(WebElement element){return getDropdownObj(element).getAllSelectedOptions(); }
+
+    default void deSelectDropDownByVal(String s, WebElement element){
+        getDropdownObj(element).deselectByValue(s);
+    }
+
+    default void deSelectDropDownByIndex(int i, WebElement element){
+        getDropdownObj(element).deselectByIndex(i);
+    }
+
+    default void deSelectDropDownByText(String s, WebElement element){ getDropdownObj(element).deselectByVisibleText(s);
+    }
+
+    default void deSelectAllDropdownOptions(WebElement element){getDropdownObj(element).deselectAll();}
+
     default Select getDropdownObj(WebElement element){
         return new Select(element);
     }
