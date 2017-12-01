@@ -1,0 +1,67 @@
+package testscripts;
+
+import com.sun.org.glassfish.gmbal.Description;
+import daolibrary.MongoDbDao;
+import driversetup.DriverSetup;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.*;
+import pagefactory.Page1;
+import pagefactory.pagefactoryinit.PageFactoryInit;
+import static testscripts.testscriptsconsts.TestScriptConsts.BASE_URL;
+
+
+public class TestPageUsingAsserts implements DriverSetup{
+
+    private WebDriver driver;
+
+    @Parameters({"browser"})
+    @BeforeClass
+    public void setup(String browser) {
+//        driver = initializeLocalDriver(browser);
+//        PageFactoryInit driverInit = new PageFactoryInit(driver);
+//        driver.get(BASE_URL);
+    }
+
+<<<<<<< HEAD:src/test/java/testscripts/TestPageUsingAsserts.java
+    @Test(description = "Testing first Assert")
+
+    public void test(){ Assert.assertTrue(true);}
+=======
+    @Test(description = "Testing first Assert", groups = {"regression"})
+    public void test(){
+        Assert.assertTrue(true);
+    }
+>>>>>>> feature-log-listeners:src/test/java/testscripts/TestPage.java
+
+    @Test(description = "Testing second Assert", groups = {"regression"})
+    public void test1(){
+        Assert.assertTrue(true);
+    }
+
+<<<<<<< HEAD:src/test/java/testscripts/TestPageUsingAsserts.java
+    @Test(description = "Testing third Assert", enabled = false)
+=======
+    @Test(description = "Testing third Assert", groups = {"smoke"})
+>>>>>>> feature-log-listeners:src/test/java/testscripts/TestPage.java
+    public void test2(){
+        Assert.assertTrue(false);
+    }
+
+    @Test(description = "Testing fourth Assert", groups = {"smoke","regression"})
+    public void test3(){
+        Assert.assertTrue(true);
+    }
+
+    @Test(description = "Testing fifth Assert", groups = {"sanity"})
+    public void test4(){
+        Assert.assertTrue(false);
+    }
+
+
+
+    @AfterClass
+    public void tearDown(){
+
+    }
+}
