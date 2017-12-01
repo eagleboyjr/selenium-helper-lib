@@ -42,7 +42,6 @@ public interface FormActions{
     }
 
     default void deSelectAllDropdownOptions(WebElement element){getDropdownObj(element).deselectAll();}
-
     default Select getDropdownObj(WebElement element){
         return new Select(element);
     }
