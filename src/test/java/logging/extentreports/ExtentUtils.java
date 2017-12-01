@@ -4,12 +4,14 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import static logging.extentreports.Constants.DOC_TITLE;
+import static logging.extentreports.Constants.OUTPUT_HTML;
 
 public class ExtentUtils {
     private static ExtentReports extent;
 
     public static ExtentReports getInstance(){
         if(extent ==null)
+            createInstance(OUTPUT_HTML);
 
         return extent;
     }
@@ -22,8 +24,13 @@ public class ExtentUtils {
         htmlReporter.config().setDocumentTitle(DOC_TITLE);
 
         extent = new ExtentReports();
+        extent.setSystemInfo("OS : ", System.getProperty("os.name"));
+        extent.setSystemInfo("OS:  ", System.getProperty("os.name"));
+        extent.setSystemInfo("Test Engineer: ", System.getProperty("user.name"));
+        extent.setSystemInfo("Java Version: ", System.getProperty("java.version"));
         extent.attachReporter(htmlReporter);
         return extent;
     }
+
 
 }
