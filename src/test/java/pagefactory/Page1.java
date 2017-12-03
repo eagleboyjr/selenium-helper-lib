@@ -3,11 +3,9 @@ package pagefactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pagefactory.pagefactorysupport.PageFactoryActions;
+import pagefactory.pagefactorysupport.PageFactoryBaseActions;
 
-import java.util.List;
-
-public class Page1 extends PageFactoryActions {
+public class Page1 extends PageFactoryBaseActions {
 
     private WebDriver driver;
 

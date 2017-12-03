@@ -3,7 +3,7 @@ package actionslibrary;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
-public class PageActions extends Actions{
+public class PageBaseActions extends BaseActions {
 
     private WebDriver driver;
 
